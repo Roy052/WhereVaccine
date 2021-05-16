@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WhereVaccineView: View {
+    @ObservedObject var document: WhereVaccineDocument
+
+    init(document: WhereVaccineDocument){
+        self.document = document
+    }
+
+    
     var body: some View {
         Text("Hello, world!!")
             .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

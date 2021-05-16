@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		245B9127264FD2170085B75C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B9126264FD2170085B75C /* AppDelegate.swift */; };
 		245B9129264FD2170085B75C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B9128264FD2170085B75C /* SceneDelegate.swift */; };
-		245B912B264FD2170085B75C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B912A264FD2170085B75C /* ContentView.swift */; };
+		245B912B264FD2170085B75C /* WhereVaccineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B912A264FD2170085B75C /* WhereVaccineView.swift */; };
 		245B912D264FD2180085B75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245B912C264FD2180085B75C /* Assets.xcassets */; };
 		245B9130264FD2180085B75C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 245B912F264FD2180085B75C /* Preview Assets.xcassets */; };
 		245B9133264FD2180085B75C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245B9131264FD2180085B75C /* LaunchScreen.storyboard */; };
 		245B913E264FD2180085B75C /* WhereVaccineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B913D264FD2180085B75C /* WhereVaccineTests.swift */; };
 		245B9149264FD2180085B75C /* WhereVaccineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B9148264FD2180085B75C /* WhereVaccineUITests.swift */; };
+		2460CC75265121530029AF4B /* WhereVaccine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460CC74265121530029AF4B /* WhereVaccine.swift */; };
+		2460CC77265121D70029AF4B /* WhereVaccineDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460CC76265121D70029AF4B /* WhereVaccineDocument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		245B9123264FD2170085B75C /* WhereVaccine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereVaccine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245B9126264FD2170085B75C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		245B9128264FD2170085B75C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		245B912A264FD2170085B75C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		245B912A264FD2170085B75C /* WhereVaccineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineView.swift; sourceTree = "<group>"; };
 		245B912C264FD2180085B75C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		245B912F264FD2180085B75C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		245B9132264FD2180085B75C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		245B9144264FD2180085B75C /* WhereVaccineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereVaccineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		245B9148264FD2180085B75C /* WhereVaccineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineUITests.swift; sourceTree = "<group>"; };
 		245B914A264FD2180085B75C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2460CC74265121530029AF4B /* WhereVaccine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccine.swift; sourceTree = "<group>"; };
+		2460CC76265121D70029AF4B /* WhereVaccineDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineDocument.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				245B9126264FD2170085B75C /* AppDelegate.swift */,
 				245B9128264FD2170085B75C /* SceneDelegate.swift */,
-				245B912A264FD2170085B75C /* ContentView.swift */,
+				2460CC74265121530029AF4B /* WhereVaccine.swift */,
+				2460CC76265121D70029AF4B /* WhereVaccineDocument.swift */,
+				245B912A264FD2170085B75C /* WhereVaccineView.swift */,
 				245B912C264FD2180085B75C /* Assets.xcassets */,
 				245B9131264FD2180085B75C /* LaunchScreen.storyboard */,
 				245B9134264FD2180085B75C /* Info.plist */,
@@ -266,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2460CC77265121D70029AF4B /* WhereVaccineDocument.swift in Sources */,
 				245B9127264FD2170085B75C /* AppDelegate.swift in Sources */,
+				2460CC75265121530029AF4B /* WhereVaccine.swift in Sources */,
 				245B9129264FD2170085B75C /* SceneDelegate.swift in Sources */,
-				245B912B264FD2170085B75C /* ContentView.swift in Sources */,
+				245B912B264FD2170085B75C /* WhereVaccineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
