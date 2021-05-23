@@ -36,13 +36,13 @@ class WhereVaccineDocument: ObservableObject{
 
         private var fetchImageCancellabe: AnyCancellable?
         private func fetchData(){
-            if let url = self.whereVaccine.backgroundURL{
-                fetchImageCancellabe?.cancel()
-                fetchImageCancellabe = URLSession.shared.dataTaskPublisher(for: url)
-                    .map{ data, URLResponse in UIImage(data: data)}
-                    .receive(on: DispatchQueue.main)
-                    .replaceError(with: nil)
-                //.assign(to: \.backgroundImage, on: self)
-            }
+//            if let url = self.whereVaccine.backgroundURL{
+//                fetchImageCancellabe?.cancel()
+//                fetchImageCancellabe = URLSession.shared.dataTaskPublisher(for: url)
+//                    .map{ data, URLResponse in UIImage(data: data)}
+//                    .receive(on: DispatchQueue.main)
+//                //.replaceError(with: nil)
+//                //.assign(to: \.backgroundImage, on: self)
+//            }
         }
 }

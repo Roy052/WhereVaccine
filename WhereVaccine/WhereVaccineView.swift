@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WhereVaccineView: View {
     @ObservedObject var document: WhereVaccineDocument
+    @State private var showSomething = false
 
     init(document: WhereVaccineDocument){
         self.document = document
@@ -16,7 +17,22 @@ struct WhereVaccineView: View {
 
     
     var body: some View {
-        Text("Hello, world!!")
-            .padding()
+        VStack(spacing: 0){
+            ZStack{
+                Text("백신 접종센터 찾기").font(.headline).padding()
+                HStack{
+                    Spacer()
+                    Button(action: {
+                        self.showSomething = true
+                    }, label: { Text("주변에서 찾기")}).padding()
+                }
+            }
+            Form{
+                Section {
+                    Text("서울")
+                    Text("대구")
+                }
+            }
+        }
     }
 }
