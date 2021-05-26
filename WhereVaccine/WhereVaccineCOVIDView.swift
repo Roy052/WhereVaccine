@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct WhereVaccineCOVIDView: View {
+    var url = "http://ncov.mohw.go.kr/regSocdisBoardView.do"
+    
     var body: some View {
-        Text("Welcome, WhereVaccineCOVIDView")
+            Button(action: {
+                if let url = URL(string: url){
+                    UIApplication.shared.open(url, options: [:])
+                }
+            }, label: {
+                Text("사회적 거리두기 정보 링크")
+            })
+            
     }
 }
 
