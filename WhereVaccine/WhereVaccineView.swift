@@ -32,7 +32,7 @@ struct WhereVaccineView: View {
                 }
             }
             Form{
-                Section {
+                HStack{
                     Menu{
                         ForEach(document.sido.map{ String($0) }, id: \.self){ sido in
                             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -42,6 +42,7 @@ struct WhereVaccineView: View {
                     } label: {
                         Text("시 / 도    ")
                     }
+                    Spacer()
                     Menu{
                         ForEach(document.seoulSigungu.map{ String($0) }, id: \.self){ sigungu in
                             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -51,14 +52,13 @@ struct WhereVaccineView: View {
                     } label: {
                         Text("시 / 군 / 구    ")
                     }
-                    Menu{
-                        //ForEach
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Text("개포동")
-                        })
-                    } label: {
-                        Text("읍 / 면 / 동    ")
-                    }
+                    Spacer()
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Text("입력")
+                    })
+                }
+                Section {
+                    Text("ABC")
                 }
             }
         }
