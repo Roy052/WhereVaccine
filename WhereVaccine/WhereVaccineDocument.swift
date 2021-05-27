@@ -10,6 +10,8 @@ import Combine
 
 class WhereVaccineDocument: ObservableObject{
     @Published private var whereVaccine: WhereVaccine
+    var sido: [String] {whereVaccine.sido}
+    var seoulSigungu: [String] {whereVaccine.seoulSigungu}
 
     private var autosaveCancellable: AnyCancellable?
         
@@ -24,6 +26,7 @@ class WhereVaccineDocument: ObservableObject{
             fetchData()
         }
 
+    
     var backgroundURL: URL? {
             get {
                 whereVaccine.backgroundURL
