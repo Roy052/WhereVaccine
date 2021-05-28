@@ -10,14 +10,17 @@ import SwiftUI
 struct WhereVaccineView: View {
     @ObservedObject var document: WhereVaccineDocument
     @State private var showSomething = false
-    @State private var showSeoul = false
     @State private var show = false
     @State private var showProject = false
     @State private var showSites = false
+    
+    @State var selected_sido: String?
+    @State var selected_sigungu: String?
 
     init(document: WhereVaccineDocument){
         self.document = document
     }
+    
 
     
     var body: some View {
@@ -32,35 +35,23 @@ struct WhereVaccineView: View {
                 }
             }
             Form{
-                HStack{
-                    Menu{
-                        ForEach(document.sido.map{ String($0) }, id: \.self){ sido in
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                Text(sido)
-                            })
-                        }
-                    } label: {
-                        Text("시 / 도    ")
+                Picker("시/도", selection: $selected_sido){
+                    Text("선택").tag(String?.none)
+                    ForEach(document.sido.map{ String($0) }, id: \.self){ (sido: String?) in
+                        Text("\(sido ?? "선택")").tag(sido)
                     }
-                    Spacer()
-                    Menu{
-                        ForEach(document.seoulSigungu.map{ String($0) }, id: \.self){ sigungu in
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                Text(sigungu)
-                            })
-                        }
-                    } label: {
-                        Text("시 / 군 / 구    ")
-                    }
-                    Spacer()
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Text("입력")
-                    })
                 }
-                Section {
-                    Text("ABC")
+                Picker("시/군/구", selection: $selected_sigungu){
+                    Text("선택").tag(String?.none)
+                    ForEach(document.seoulSigungu.map{ String($0) }, id: \.self){ (sigungu: String?) in
+                        Text("\(sigungu ?? "선택")").tag(sigungu)
+                    }
+                }
+                Button("검색"){
+                    //정한 정보를 넘겨주기
                 }
             }
+                   
         }
     }
 }
