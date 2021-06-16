@@ -25,15 +25,6 @@ struct WhereVaccineView: View {
     
     var body: some View {
         VStack(spacing: 0.0){
-            ZStack{
-                Text("백신 접종센터 찾기").font(.headline)
-                HStack{
-                    Spacer()
-                    Button(action: {
-                        self.showSomething = true
-                    }, label: { Text("주변에서 찾기")}).padding()
-                }
-            }
             Form{
                 Picker("시/도", selection: $selected_sido){
                     Text("선택").tag(String?.none)
@@ -125,8 +116,7 @@ struct WhereVaccineView: View {
                         Button("검색"){}
                 })
             }
-        
-            
+            .navigationBarTitle("백신 접종센터 찾기")
         }
     }
 }
