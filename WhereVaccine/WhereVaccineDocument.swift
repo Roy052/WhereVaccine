@@ -12,7 +12,23 @@ class WhereVaccineDocument: ObservableObject{
     @Published private var whereVaccine: WhereVaccine
     var sido: [String] {whereVaccine.sido}
     var seoulSigungu: [String] {whereVaccine.seoulSigungu}
-
+    var pusanSigungu: [String] {whereVaccine.pusanSigungu}
+    var daeguSigungu: [String] {whereVaccine.daeguSigungu}
+    var incheonSigungu: [String] {whereVaccine.incheonSigungu}
+    var gwangjuSigungu: [String] {whereVaccine.gwangjuSigungu}
+    var daejeonSigungu: [String] {whereVaccine.daejeonSigungu}
+    var ulsanSigungu: [String] {whereVaccine.ulsanSigungu}
+    var sejongSigungu: [String] {whereVaccine.sejongSigungu}
+    var gyeongiSigungu: [String] {whereVaccine.gyeongiSigungu}
+    var gangwonSigungu: [String] {whereVaccine.gangwonSigungu}
+    var chungbukSigungu: [String] {whereVaccine.chungbukSigungu}
+    var chungnamSigungu: [String] {whereVaccine.chungnamSigungu}
+    var jeonbukSigungu: [String] {whereVaccine.jeonbukSigungu}
+    var jeonnamSigungu: [String] {whereVaccine.jeonnamSigungu}
+    var kyoungbukSigungu: [String] {whereVaccine.kyoungbukSigungu}
+    var kyongnamSigungu: [String] {whereVaccine.kyongnamSigungu}
+    var jejuSigungu: [String] {whereVaccine.jejuSigungu}
+   
     private var autosaveCancellable: AnyCancellable?
         
         private static let untitled = "WhereVaccineDocument.Untitled"

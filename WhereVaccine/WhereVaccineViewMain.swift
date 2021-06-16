@@ -9,6 +9,8 @@ import SwiftUI
 
 struct WhereVaccineViewMain: View {
     let whereVaccineDocument = WhereVaccineDocument()
+    @State var selected_sido:String?
+    @State var selected_sigungu:String?
     
     @ViewBuilder
     var body: some View {
@@ -18,19 +20,19 @@ struct WhereVaccineViewMain: View {
         }
         //로딩이 끝났을 때
         else{
-            VStack(spacing: 0){
-                Text("어디 백신").font(Font.headline)
+            VStack(){
                 NavigationView{
                     HStack{
                         NavigationLink(
-                            destination: WhereVaccineView(document: whereVaccineDocument),
+                            destination: WhereVaccineView(document: whereVaccineDocument,selected_sido: self.$selected_sido, selected_sigungu: self.$selected_sigungu),
                             label: {
                                 ZStack{
                                     Image("VaccineInfo")
                                         .resizable()
                                         .scaledToFit()
-                                }
+                                }   
                             })
+                            .navigationBarTitle("어디 백신")
                         NavigationLink(
                             destination: WhereVaccineCOVIDView(),
                             label: {
