@@ -20,6 +20,7 @@
 		2460CC75265121530029AF4B /* WhereVaccine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460CC74265121530029AF4B /* WhereVaccine.swift */; };
 		2460CC77265121D70029AF4B /* WhereVaccineDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460CC76265121D70029AF4B /* WhereVaccineDocument.swift */; };
 		246168972659E7CD00B8780F /* WhereVaccineCOVIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246168962659E7CD00B8780F /* WhereVaccineCOVIDView.swift */; };
+		66656957267A341F00221B82 /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66656956267A341F00221B82 /* request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2460CC74265121530029AF4B /* WhereVaccine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccine.swift; sourceTree = "<group>"; };
 		2460CC76265121D70029AF4B /* WhereVaccineDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineDocument.swift; sourceTree = "<group>"; };
 		246168962659E7CD00B8780F /* WhereVaccineCOVIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineCOVIDView.swift; sourceTree = "<group>"; };
+		66656956267A341F00221B82 /* request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		245B9125264FD2170085B75C /* WhereVaccine */ = {
 			isa = PBXGroup;
 			children = (
+				66656956267A341F00221B82 /* request.swift */,
 				245B9126264FD2170085B75C /* AppDelegate.swift */,
 				245B9128264FD2170085B75C /* SceneDelegate.swift */,
 				2460CC74265121530029AF4B /* WhereVaccine.swift */,
@@ -283,6 +286,7 @@
 			files = (
 				2460CC77265121D70029AF4B /* WhereVaccineDocument.swift in Sources */,
 				246168972659E7CD00B8780F /* WhereVaccineCOVIDView.swift in Sources */,
+				66656957267A341F00221B82 /* request.swift in Sources */,
 				245B9127264FD2170085B75C /* AppDelegate.swift in Sources */,
 				2460CC75265121530029AF4B /* WhereVaccine.swift in Sources */,
 				245B9129264FD2170085B75C /* SceneDelegate.swift in Sources */,
