@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24083A3026591E1F00DC676D /* WhereVaccineViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083A2F26591E1F00DC676D /* WhereVaccineViewMain.swift */; };
 		2431E7802679EF6A00FB541C /* WhereVaccineViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431E77F2679EF6A00FB541C /* WhereVaccineViewLoading.swift */; };
+		2431E782267A39E700FB541C /* WhereVaccineViewSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431E781267A39E700FB541C /* WhereVaccineViewSearch.swift */; };
 		245B9127264FD2170085B75C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B9126264FD2170085B75C /* AppDelegate.swift */; };
 		245B9129264FD2170085B75C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B9128264FD2170085B75C /* SceneDelegate.swift */; };
 		245B912B264FD2170085B75C /* WhereVaccineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B912A264FD2170085B75C /* WhereVaccineView.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		24083A2F26591E1F00DC676D /* WhereVaccineViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineViewMain.swift; sourceTree = "<group>"; };
 		2431E77F2679EF6A00FB541C /* WhereVaccineViewLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineViewLoading.swift; sourceTree = "<group>"; };
+		2431E781267A39E700FB541C /* WhereVaccineViewSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineViewSearch.swift; sourceTree = "<group>"; };
 		245B9123264FD2170085B75C /* WhereVaccine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereVaccine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245B9126264FD2170085B75C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		245B9128264FD2170085B75C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				2460CC74265121530029AF4B /* WhereVaccine.swift */,
 				2460CC76265121D70029AF4B /* WhereVaccineDocument.swift */,
 				245B912A264FD2170085B75C /* WhereVaccineView.swift */,
+				2431E781267A39E700FB541C /* WhereVaccineViewSearch.swift */,
 				24083A2F26591E1F00DC676D /* WhereVaccineViewMain.swift */,
 				2431E77F2679EF6A00FB541C /* WhereVaccineViewLoading.swift */,
 				246168962659E7CD00B8780F /* WhereVaccineCOVIDView.swift */,
@@ -286,6 +289,7 @@
 			files = (
 				2460CC77265121D70029AF4B /* WhereVaccineDocument.swift in Sources */,
 				246168972659E7CD00B8780F /* WhereVaccineCOVIDView.swift in Sources */,
+				2431E782267A39E700FB541C /* WhereVaccineViewSearch.swift in Sources */,
 				66656957267A341F00221B82 /* request.swift in Sources */,
 				245B9127264FD2170085B75C /* AppDelegate.swift in Sources */,
 				2460CC75265121530029AF4B /* WhereVaccine.swift in Sources */,

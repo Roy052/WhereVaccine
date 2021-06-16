@@ -23,8 +23,6 @@ struct WhereVaccineView: View {
         _selected_sigungu = selected_sigungu
     }
     
-    
-    
     var body: some View {
         VStack(spacing: 0.0){
             ZStack{
@@ -121,11 +119,14 @@ struct WhereVaccineView: View {
                     }
                     
                 }
-                Button("검색"){
-                    //정한 정보를 넘겨주기
-                }
+                NavigationLink(
+                    destination: WhereVaccineViewSearch(selected_sido: selected_sido ?? "대구광역시", selected_sigungu: selected_sigungu ?? "북구"),
+                    label: {
+                        Button("검색"){}
+                })
             }
-                   
+        
+            
         }
     }
 }
