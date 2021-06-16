@@ -9,41 +9,45 @@ import SwiftUI
 
 struct WhereVaccineViewMain: View {
     let whereVaccineDocument = WhereVaccineDocument()
+    
+    @ViewBuilder
     var body: some View {
-        VStack(spacing: 0){
-            Text("어디 백신").font(Font.headline)
-            NavigationView{
-                HStack{
-                    NavigationLink(
-                        destination: WhereVaccineView(document: whereVaccineDocument),
-                        label: {
-                            ZStack{
-                                Rectangle().padding(13)
-                                    .aspectRatio(1.0, contentMode: .fit)
-
-                                Rectangle().padding()
-                                    .aspectRatio(1.0, contentMode: .fit)
-                                    .foregroundColor(Color.white)
-                                Text("백신 접종 센터 정보")
-                            }
+        //로딩중일 때
+        if self.isLoading {
+            WhereVaccineViewLoading()
+        }
+        //로딩이 끝났을 때
+        else{
+            VStack(spacing: 0){
+                Text("어디 백신").font(Font.headline)
+                NavigationView{
+                    HStack{
+                        NavigationLink(
+                            destination: WhereVaccineView(document: whereVaccineDocument),
+                            label: {
+                                ZStack{
+                                    Image("VaccineInfo")
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                            })
+                        NavigationLink(
+                            destination: WhereVaccineCOVIDView(),
+                            label: {
+                                ZStack{
+                                    Image("COVIDInfo")
+                                        .resizable()
+                                        .scaledToFit()
+                                }
                         })
-                    NavigationLink(
-                        destination: WhereVaccineCOVIDView(),
-                        label: {
-                            ZStack{
-                                Rectangle().padding(13)
-                                    .aspectRatio(1.0, contentMode: .fit)
-
-                                Rectangle().padding()
-                                    .aspectRatio(1.0, contentMode: .fit)
-                                    .foregroundColor(Color.white)
-                                Text("코로나19 정보")
-                            }
-                        })
-                    
+                    }
                 }
-                
             }
         }
+    }
+    
+    //loading 확인 변수
+    var isLoading: Bool{
+        whereVaccineDocument.backgroundURL != nil
     }
 }
