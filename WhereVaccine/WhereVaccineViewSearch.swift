@@ -25,15 +25,31 @@ class WhereVaccineSearchDocument: ObservableObject{
     @Published var datas = [Response]()
     var selected_sido:String
     var selected_sigungu:String
+    var start = 0
     
     init(selected_sido: String, selected_sigungu: String){
         
         self.selected_sido = selected_sido
         self.selected_sigungu = selected_sigungu
-        getVaccData(selected_sido, selected_sigungu, 0, 10){ data in
+        getVaccData(selected_sido, selected_sigungu, start, 10){ data in
             self.datas = data.result
-            
         }
+        start += 11
+    }
+    func beforeData()->(){
+        if(start != 0){
+            start -= 11
+            getVaccData(selected_sido, selected_sigungu, start, 10){ data in
+                self.datas = data.result
+            }
+        }
+    }
+    
+    func nextData()->(){
+        getVaccData(selected_sido, selected_sigungu, start, 10){ data in
+            self.datas = data.result
+        }
+        start += 11
     }
     
 }
@@ -58,8 +74,11 @@ struct VaccineCenterList: View {
                 VaccineCenterListEntry(center: center)
                 
             }
-            Button(action: {print(document.datas[0].orgnm)}, label: {
-                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            Button(action: {document.beforeData()}, label: {
+                Text("이전")
+            })
+            Button(action: {document.nextData()}, label: {
+                Text("다음")
             })
         }
     }
