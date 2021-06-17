@@ -22,7 +22,7 @@ struct WhereVaccineViewSearch: View {
 }
 
 class WhereVaccineSearchDocument: ObservableObject{
-    var datas = [Response]()
+    @Published var datas = [Response]()
     var selected_sido:String
     var selected_sigungu:String
     
@@ -72,7 +72,12 @@ struct VaccineCenterListEntry: View {
         }
     
         var body: some View {
-            Text(center.orgnm)
+            VStack(alignment: .leading) {
+                Text(center.orgnm)
+                Text(center.orgZipaddr).font(.caption)
+                Text(center.orgTlno).font(.caption)
+            }
+                .lineLimit(1)
         }
 }
 
