@@ -41,7 +41,7 @@ struct WhereVaccineViewMain: View {
                             })
                         }
                         NavigationLink(
-                            destination: MapView(),
+                            destination: MapView(mapDatas: []),
                             label: {
                                 Image("MapView")
                                     .resizable()

@@ -24,4 +24,16 @@ extension Location {
             Location(title: "경북대학교 공대9호관", coordinate: CLLocationCoordinate2D(latitude: 35.886880, longitude: 128.608654)),
         ]
     }
+    
+    static func getDataLocation(data: [Response]) -> [Location]{
+        var locations = [Location]()
+        for i in 0..<data.count {
+            locations.append(Location(title: data[i].orgnm, coordinate: CLLocationCoordinate2D(latitude: data[i].x, longitude: data[i].y)))
+            //print(data[i].orgnm)
+        }
+        for i in 0..<locations.count{
+            print(locations[i].coordinate)
+        }
+        return locations
+    }
 }

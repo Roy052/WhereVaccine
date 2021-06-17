@@ -84,7 +84,7 @@ struct VaccineCenterList: View {
             })
         }
         .navigationBarItems(trailing: NavigationLink(
-                                destination: MapView(),
+                                destination: MapView(mapDatas: document.datas),
                                 label: {
                                     Text("지도에서 보기")
                                 }))
