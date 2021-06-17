@@ -11,6 +11,7 @@ struct WhereVaccineViewMain: View {
     let whereVaccineDocument = WhereVaccineDocument()
     @State var selected_sido:String?
     @State var selected_sigungu:String?
+    var url = "http://ncov.mohw.go.kr/regSocdisBoardView.do"
     
     @ViewBuilder
     var body: some View {
@@ -32,16 +33,18 @@ struct WhereVaccineViewMain: View {
                                         .scaledToFit()
                                 })
                                 .navigationBarTitle("어디 백신")
-                            NavigationLink(
-                                destination: WhereVaccineCOVIDView(),
-                                label: {
-                                    Image("COVIDInfo")
-                                        .resizable()
-                                        .scaledToFit()
+                            Button(action: {
+                                if let url = URL(string: url){
+                                        UIApplication.shared.open(url, options: [:])
+                                }
+                            }, label: {
+                                Image("COVIDInfo")
+                                    .resizable()
+                                    .scaledToFit()
                             })
                         }
                         NavigationLink(
-                            destination: MapView(mapDatas: []),
+                            destination: MapView(document: WhereVaccineSearchDocument(selected_sido: "대구광역시", selected_sigungu: "북구")),
                             label: {
                                 Image("MapView")
                                     .resizable()

@@ -10,6 +10,7 @@
 		24083A3026591E1F00DC676D /* WhereVaccineViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24083A2F26591E1F00DC676D /* WhereVaccineViewMain.swift */; };
 		2431E7802679EF6A00FB541C /* WhereVaccineViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431E77F2679EF6A00FB541C /* WhereVaccineViewLoading.swift */; };
 		2431E782267A39E700FB541C /* WhereVaccineViewSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431E781267A39E700FB541C /* WhereVaccineViewSearch.swift */; };
+		2431E786267BA01500FB541C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2431E785267BA01500FB541C /* LocationManager.swift */; };
 		245B9127264FD2170085B75C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B9126264FD2170085B75C /* AppDelegate.swift */; };
 		245B9129264FD2170085B75C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B9128264FD2170085B75C /* SceneDelegate.swift */; };
 		245B912B264FD2170085B75C /* WhereVaccineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245B912A264FD2170085B75C /* WhereVaccineView.swift */; };
@@ -47,6 +48,7 @@
 		24083A2F26591E1F00DC676D /* WhereVaccineViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineViewMain.swift; sourceTree = "<group>"; };
 		2431E77F2679EF6A00FB541C /* WhereVaccineViewLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineViewLoading.swift; sourceTree = "<group>"; };
 		2431E781267A39E700FB541C /* WhereVaccineViewSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereVaccineViewSearch.swift; sourceTree = "<group>"; };
+		2431E785267BA01500FB541C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		245B9123264FD2170085B75C /* WhereVaccine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereVaccine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245B9126264FD2170085B75C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		245B9128264FD2170085B75C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				2431E77F2679EF6A00FB541C /* WhereVaccineViewLoading.swift */,
 				246168962659E7CD00B8780F /* WhereVaccineCOVIDView.swift */,
 				3B0E9BE2267B40B500971366 /* MapView.swift */,
+				2431E785267BA01500FB541C /* LocationManager.swift */,
 				3B0E9BE4267B418F00971366 /* Map.swift */,
 				245B912C264FD2180085B75C /* Assets.xcassets */,
 				245B9131264FD2180085B75C /* LaunchScreen.storyboard */,
@@ -305,6 +308,7 @@
 				245B912B264FD2170085B75C /* WhereVaccineView.swift in Sources */,
 				3B0E9BE5267B418F00971366 /* Map.swift in Sources */,
 				24083A3026591E1F00DC676D /* WhereVaccineViewMain.swift in Sources */,
+				2431E786267BA01500FB541C /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
