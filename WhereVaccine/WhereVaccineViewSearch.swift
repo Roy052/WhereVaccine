@@ -23,6 +23,7 @@ struct WhereVaccineViewSearch: View {
 
 class WhereVaccineSearchDocument: ObservableObject{
     @Published var datas = [Response]()
+    @Published var mapDatas = [Response]()
     var selected_sido:String
     var selected_sigungu:String
     var start = 0
@@ -33,6 +34,7 @@ class WhereVaccineSearchDocument: ObservableObject{
         self.selected_sigungu = selected_sigungu
         getVaccData(selected_sido, selected_sigungu, start, 10){ data in
             self.datas = data.result
+            self.mapDatas = data.result
         }
         start += 11
     }
@@ -46,10 +48,10 @@ class WhereVaccineSearchDocument: ObservableObject{
     }
     
     func nextData()->(){
+        start += 11
         getVaccData(selected_sido, selected_sigungu, start, 10){ data in
             self.datas = data.result
         }
-        start += 11
     }
     
 }
@@ -81,6 +83,11 @@ struct VaccineCenterList: View {
                 Text("다음")
             })
         }
+        .navigationBarItems(trailing: NavigationLink(
+                                destination: MapView(),
+                                label: {
+                                    Text("지도에서 보기")
+                                }))
     }
 }
     
