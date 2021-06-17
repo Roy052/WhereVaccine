@@ -54,13 +54,15 @@ struct VaccineCenterList: View {
     var body: some View {
         List{
 //            Text(datas[0].orgnm)
-//            ForEach(document.datas,id:\.self){ center in
-//                VaccineCenterListEntry(center: center)
-//            }
+            ForEach(document.datas,id:\.self){ center in
+                VaccineCenterListEntry(center: center)
+                
+            }
+            Button(action: {print(document.datas[0].orgnm)}, label: {
+                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            })
         }
     }
-    
-    
 }
     
 struct VaccineCenterListEntry: View {

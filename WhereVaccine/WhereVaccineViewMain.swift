@@ -22,26 +22,31 @@ struct WhereVaccineViewMain: View {
         else{
             VStack(){
                 NavigationView{
-                    HStack{
-                        NavigationLink(
-                            destination: WhereVaccineView(document: whereVaccineDocument,selected_sido: self.$selected_sido, selected_sigungu: self.$selected_sigungu),
-                            label: {
-                                ZStack{
+                    VStack{
+                        HStack{
+                            NavigationLink(
+                                destination: WhereVaccineView(document: whereVaccineDocument,selected_sido: self.$selected_sido, selected_sigungu: self.$selected_sigungu),
+                                label: {
                                     Image("VaccineInfo")
                                         .resizable()
                                         .scaledToFit()
-                                }   
-                            })
-                            .navigationBarTitle("어디 백신")
-                        NavigationLink(
-                            destination: WhereVaccineCOVIDView(),
-                            label: {
-                                ZStack{
+                                })
+                                .navigationBarTitle("어디 백신")
+                            NavigationLink(
+                                destination: WhereVaccineCOVIDView(),
+                                label: {
                                     Image("COVIDInfo")
                                         .resizable()
                                         .scaledToFit()
-                                }
-                        })
+                            })
+                        }
+                        NavigationLink(
+                            destination: MapView(),
+                            label: {
+                                Image("VaccineInfo")
+                                    .resizable()
+                                    .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            })
                     }
                 }
             }
