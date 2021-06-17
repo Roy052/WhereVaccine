@@ -30,8 +30,8 @@ struct MapView: View {
 
     @ViewBuilder
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: locations, annotationContent:  { (location) -> MapPin in
-            MapPin(coordinate: location.coordinate, tint: .green)
+        Map(coordinateRegion: $region, annotationItems: locations, annotationContent:  { (location) -> MapMarker in
+            MapMarker(coordinate: location.coordinate, tint: .green)
         }).edgesIgnoringSafeArea(.all)
         HStack{
             Button(action: {
