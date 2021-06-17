@@ -27,7 +27,6 @@ struct WhereVaccineView: View {
         VStack(spacing: 0.0){
             Form{
                 Picker("시/도", selection: $selected_sido){
-                    
                     Text("선택").tag(String?.none)
                     ForEach(document.sido.map{ String($0) }, id: \.self){ (sido: String?) in
                         Text("\(sido ?? "선택")").tag(sido)

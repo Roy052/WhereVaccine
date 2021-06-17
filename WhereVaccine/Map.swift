@@ -28,7 +28,7 @@ extension Location {
     static func getDataLocation(data: [Response]) -> [Location]{
         var locations = [Location]()
         for i in 0..<data.count {
-            locations.append(Location(title: data[i].orgnm, coordinate: CLLocationCoordinate2D(latitude: data[i].x, longitude: data[i].y)))
+            locations.append(Location(title: data[i].orgnm, coordinate: CLLocationCoordinate2D(latitude: data[i].y, longitude: data[i].x)))
             //print(data[i].orgnm)
         }
         for i in 0..<locations.count{

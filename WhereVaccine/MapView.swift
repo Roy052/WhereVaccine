@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
+import Combine
 import MapKit
 
 struct MapView: View {
-    @StateObject var locationManager = LocationManager()
+    @State private var locationManager = LocationManager(){
+        willSet{
+            let coordinate = self.locationManager.location != nil ? self.locationManager.location!.coordinate : CLLocationCoordinate2D()
+            region.center.latitude = coordinate.latitude
+            region.center.longitude = coordinate.longitude
+        }
+    }
     var document:WhereVaccineSearchDocument
-    var latitude:Double{
-        return locationManager.lastLocation?.coordinate.latitude ?? 0
-    }
-    var longtitude:Double{
-        return locationManager.lastLocation?.coordinate.longitude ?? 0
-    }
     @State private var locations: [Location] = Location.getLocation()
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.8889591, longitude: 128.6095541), span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
     init(document: WhereVaccineSearchDocument){
@@ -25,13 +26,25 @@ struct MapView: View {
         for i in 0..<locations.count{
             print(locations[i].coordinate)
         }
-        print(String(latitude))
     }
 
+    @ViewBuilder
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: locations, annotationContent:  { (location) -> MapPin in
             MapPin(coordinate: location.coordinate, tint: .green)
         }).edgesIgnoringSafeArea(.all)
+        HStack{
+            Button(action: {
+                locationManager = LocationManager()
+            }, label: {
+                Text("내 위치로")
+            })
+            Button(action: {
+                locations = Location.getDataLocation(data: document.mapDatas)
+            }, label: {
+                Text("위치 표시")
+            })
+        }
     }
 }
 
