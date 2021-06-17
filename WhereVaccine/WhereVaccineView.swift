@@ -16,6 +16,8 @@ struct WhereVaccineView: View {
     
     @Binding var selected_sido: String?
     @Binding var selected_sigungu: String?
+    
+    private var map = MapViewController()
 
     init(document: WhereVaccineDocument, selected_sido: Binding<String?>, selected_sigungu: Binding<String?>){
         self.document = document
