@@ -20,41 +20,57 @@ struct WhereVaccineViewSearch: View {
         VaccineCenterList(selected_sido: selected_sido, selected_sigungu: selected_sigungu)
     }
 }
+
+class WhereVaccineSearchDocument: ObservableObject{
+    var datas = [Response]()
+    var selected_sido:String
+    var selected_sigungu:String
+    
+    init(selected_sido: String, selected_sigungu: String){
+        
+        self.selected_sido = selected_sido
+        self.selected_sigungu = selected_sigungu
+        getVaccData(selected_sido, selected_sigungu, 0, 10){ data in
+            self.datas = data.result
+            
+        }
+    }
+    
+}
      
 struct VaccineCenterList: View {
     var selected_sido:String
     var selected_sigungu:String
-    var datas = [""]
+    @ObservedObject var document: WhereVaccineSearchDocument
+    var datas = [Response]()
     
     init(selected_sido: String, selected_sigungu: String){
-        getVaccData(selected_sido, selected_sigungu, 0, 10){ data in
-            for i in 0..<10 {
-                print(data.result[i].orgnm)
-            }
-        }
         self.selected_sido = selected_sido
         self.selected_sigungu = selected_sigungu
+        document = WhereVaccineSearchDocument(selected_sido: selected_sido, selected_sigungu: selected_sigungu)
+        self.datas = document.datas
     }
         
     var body: some View {
         List{
-            FlightListEntry(orgnm: "abc")
+//            Text(datas[0].orgnm)
+//            ForEach(document.datas,id:\.self){ center in
+//                VaccineCenterListEntry(center: center)
+//            }
         }
     }
     
     
 }
     
-struct FlightListEntry: View {
-        
-    
-        var orgnm: String
-        init(orgnm: String) {
-            self.orgnm = orgnm
+struct VaccineCenterListEntry: View {
+        var center: Response
+        init(center: Response) {
+            self.center = center
         }
     
         var body: some View {
-            Text(orgnm)
+            Text(center.orgnm)
         }
 }
 

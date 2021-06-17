@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Response: Codable {
+struct Response: Codable,Hashable {
     let dywk: String            //day
 //    let endTm: String
     let hldyYn: String
