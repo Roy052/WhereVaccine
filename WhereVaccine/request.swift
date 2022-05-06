@@ -25,6 +25,7 @@ struct Response: Codable,Hashable {
     let hasAddr: Bool           // does it have lat long
     let x: Double               // long
     let y: Double               // lat
+
 }
 
 struct Ret: Codable {
@@ -68,7 +69,8 @@ func requestGet(url: String, completionHandler: @escaping (Bool, Any) -> Void){
 }
 
 func getVaccData(_ sido: String, _ sigungu: String, _ start: Int, _ count: Int, handler: @escaping (Ret) -> Void){
-    let url = "http://155.230.52.58:42108/list?addr1=\(sido)&addr2=\(sigungu)&start=\(start)&count=\(count)"
+    let ip
+    let url = ip + "/list?addr1=\(sido)&addr2=\(sigungu)&start=\(start)&count=\(count)"
     let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     print(url)
     requestGet(url: encodedString) { (success, data) in
