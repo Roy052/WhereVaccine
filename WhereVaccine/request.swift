@@ -70,7 +70,7 @@ func requestGet(url: String, completionHandler: @escaping (Bool, Any) -> Void){
 
 func getVaccData(_ sido: String, _ sigungu: String, _ start: Int, _ count: Int, handler: @escaping (Ret) -> Void){
     let ip
-    let url = ip + "/list?addr1=\(sido)&addr2=\(sigungu)&start=\(start)&count=\(count)"
+    let url = "\(ip)/list?addr1=\(sido)&addr2=\(sigungu)&start=\(start)&count=\(count)"
     let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     print(url)
     requestGet(url: encodedString) { (success, data) in
